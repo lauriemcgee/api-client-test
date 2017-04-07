@@ -1,0 +1,26 @@
+<div>
+  <h4> All Characters </h4>
+</div>
+<div>
+  <a href="/characters/new">Add Character</a>
+</div>
+<%= @characters.each do |character| %>
+<div>
+  <h4> <%= character["character_name"] %> </h4>
+</div>
+  <p> <%= character["player_name"]%></p>
+<div>
+  <p> <%= character["char_class"]%></p>
+</div>
+<div>
+  <ul>
+  <li><%= character["race"]%></li>
+  <li><%= character["background"]%></li>
+  <li><%= character["alignment"]%></li>
+  <li><%= character["experience_points"]%></li>
+  </ul>
+</div>
+<% end %>
+
+
+ 
