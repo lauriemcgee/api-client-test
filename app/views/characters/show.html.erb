@@ -9,4 +9,10 @@
       <li> Background: <%= @character["background"] %> </li>
     </ul>
   </p>
+  <p>
+  <%= form_tag "characters/#{@character['id']}", method: :delete do %>
+  <input type="Submit" value="Delete this character">
+  <% end %>
+  </p>
+  
 

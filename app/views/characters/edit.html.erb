@@ -1,0 +1,25 @@
+  <h4> Edit Character </h4>
+  <%= form_tag "/characters/#{@character['id']} %>", method: :patch do %>
+  <div>
+    Player Name:<input type="text" name="player_name" value="<%= @character['player_name'] %>">
+  </div>
+  <div>
+    Character Name: <input type="text" name="character_name" value=value="<%= @character['character_name'] %>">
+  </div>
+  <div>
+    Class: <input type="text" name="char_class" value="<%= @character['char_class'] %>">
+  </div>
+  <div>
+    Race: <input type="text" name="race" value="<%= @character['race'] %>">
+  </div>
+  <div>
+    Background: <input type="text" name="background" value="<%= @character['background'] %>">
+  </div>
+  <div>
+    Alignment: <input type="text" name="alignment" value="<%= @character['alignment'] %>">
+  </div>
+  <div>
+    Level: <input type="text" name="level" value="<%= @character['level'] %>">
+  </div>
+  <input type="Submit" value="Update Character">
+  <% end %>
